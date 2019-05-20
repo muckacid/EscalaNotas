@@ -25,16 +25,16 @@
         public function obtenerEscala()
         {
             $data = array();
+            $index = 0;
             for ($i = 0; $i <= $this->punMax; $i = $i + $this->incremento) 
             {
                 if ($i == 0){
-                    $data[$i] = array("0" => "1");
+                    $data[$index] = array("0" => "1");
                 }
                 else{
-                    $data[$i] = array($i => $this->calcularNota($i));
+                    $data[$index] = array("$i" => $this->calcularNota($i));
                 }
-
-                           
+                $index = $index + 1;            
             }
             return $data;
         }

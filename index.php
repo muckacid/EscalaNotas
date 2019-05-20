@@ -18,11 +18,10 @@
         $nota = $escala->calcularNota($puntaje);
         $data = array();
         $data[] = array( "$puntaje" => "$nota");
-        echo json_encode($data);
+        echo json_encode($data,JSON_PRETTY_PRINT);
     }
     elseif($notaMinima && $notaMaxima && $punMax && $porEx && $notaAprovacion && $incremento){
         $es = $escala->obtenerEscala();
-        echo json_encode($es);
+        echo json_encode($es,JSON_PRETTY_PRINT);
     }
-
 ?>
