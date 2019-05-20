@@ -27,14 +27,11 @@
             $data = array();
             for ($i = 0; $i <= $this->punMax; $i = $i + $this->incremento) 
             {
-                $nota = $this->calcularNota($i);
-                $puntaje = "$i"; 
-                $nota = "$nota";
                 if ($i == 0){
                     $data[$i] = array("0" => "1");
                 }
                 else{
-                    $data[$i] = array("$puntaje" => "$nota");
+                    $data[$i] = array($i => $this->calcularNota($i));
                 }
 
                            
